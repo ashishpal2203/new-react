@@ -50,7 +50,8 @@ export default function Home() {
         <div className='container px-4 mx-auto w-full'>
           <h2 className='text-3xl font-semibold text-center text-white mb-10'>Key Features </h2>
           <div className='grid md:grid-cols-2 gap-y-8 lg:grid-cols-3 sm:grid-cols-2 place-items-center'>
-          {keyCard.map((key) => <KeyCard image={key.image} btnText={key.btnText} />)}
+          {keyCard.map((key) => (
+  <KeyCard key={key.btnText} image={key.image} btnText={key.btnText} />))}
           </div>
         </div>
       </section>
@@ -59,7 +60,7 @@ export default function Home() {
         <div className='container px-4 mx-auto w-full'>
           <h2 className='text-3xl font-semibold text-white mb-10'>Key Features </h2>
           <div className='grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 place-items-center'>
-            {feacherCard.map((key) => <FeacherCard image={key.image} tittle={key.cardHeading} />)}
+          {feacherCard.map((key, index) => ( <FeacherCard key={index} image={key.image} tittle={key.cardHeading} />))}
           </div>
         </div>
       </section>
