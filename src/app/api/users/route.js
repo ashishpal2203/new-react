@@ -21,7 +21,3 @@ export async function POST(req) {
   return NextResponse.json({ result, status: "success" })
 }
 
-export async function DELETE(req){
-  await mongoose.connect(connectionStr)
-  return NextResponse.json({status: true})
-}
